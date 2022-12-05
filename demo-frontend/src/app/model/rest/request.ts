@@ -28,7 +28,6 @@ export class CreateContactRequest {
     this.surname1 = contact.surname1;
     this.surname2 = contact.surname2;
     this.phone = contact.phone;
-    this.email = contact.email;
   }
 }
 
