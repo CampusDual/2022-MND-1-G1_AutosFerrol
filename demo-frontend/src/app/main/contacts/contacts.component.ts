@@ -28,12 +28,12 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   dataSource: ContactDataSource;
   displayedColumns = [
     'select',
-    'name',
-    'surname1',
-    'surname2',
-    'phone',
+    'brand',
+    'model',
+    'price',
+    'colour',
   ];
-  fields = ['name', 'surname1', 'surname2', 'phone'];
+  fields = ['brand', 'model', 'price', 'colour'];
 
   selection = new SelectionModel<Contact>(true, []);
   error = false;

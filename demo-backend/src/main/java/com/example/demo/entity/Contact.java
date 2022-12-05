@@ -19,32 +19,32 @@ public class Contact implements Serializable{
 	private Integer id;
 	
 	@Column(nullable=false)
-	private String name;
+	private String brand;
 	
 	@Column(nullable=false)
-	private String surname1;
+	private String model;
 	
 	@Column(nullable=false)
-	private String surname2;
+	private String price;
 	
 	@Column(nullable=false, unique = true)
-	private Integer phone;
+	private String colour;
 	
 	
 
 	public Contact() {
 	}
 	
-	public Contact(String name, String surname1, String surname2, Integer phone) {
-		this.name = name;
-		this.surname1 = surname1;
-		this.surname2 = surname2;
-		this.phone = phone;
+	public Contact(String brand, String model, String price, String colour) {
+		this.brand = brand;
+		this.model = model;
+		this.price = price;
+		this.colour = colour;
 		
 	}
 
-	public Contact(Integer id, String name, String surname1, String surname2, Integer phone) {
-		this(name, surname1, surname2, phone);
+	public Contact(Integer id, String brand, String model, String price, String colour) {
+		this(brand, model, price, colour);
 		this.id = id;
 	}
 
@@ -56,36 +56,36 @@ public class Contact implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getBrand() {
+		return brand;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 
-	public String getSurname1() {
-		return surname1;
+	public String getModel() {
+		return model;
 	}
 
-	public void setSurname1(String surname1) {
-		this.surname1 = surname1;
+	public void setModel(String model) {
+		this.model = model;
 	}
 
-	public String getSurname2() {
-		return surname2;
+	public String getPrice() {
+		return price;
 	}
 
-	public void setSurname2(String surname2) {
-		this.surname2 = surname2;
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
-	public Integer getPhone() {
-		return phone;
+	public String getColour() {
+		return colour;
 	}
 
-	public void setPhone(Integer phone) {
-		this.phone = phone;
+	public void setColour(String colour) {
+		this.colour = colour;
 	}
 
 	

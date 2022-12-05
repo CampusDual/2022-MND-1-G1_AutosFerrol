@@ -5,11 +5,11 @@ public class Constant {
 	public Constant() {
 	}
 	//Contact error
-	public static final String NAME_REQUIRED ="NAME_REQUIRED";
+	public static final String BRAND_REQUIRED ="BRAND_REQUIRED";
 	public static final String ID_REQUIRED ="ID_REQUIRED";
-	public static final String SURNAME1_REQUIRED ="SURNAME1_REQUIRED";
-	public static final String SURNAME2_REQUIRED ="SURNAME2_REQUIRED";
-	public static final String PHONE_REQUIRED ="PHONE_REQUIRED";
+	public static final String MODEL_REQUIRED ="MODEL_REQUIRED";
+	public static final String PRICE_REQUIRED ="PRICE_REQUIRED";
+	public static final String COLOUR_REQUIRED ="COLOUR_REQUIRED";
 	public static final String PHONE_INVALID ="PHONE_INVALID";
 	public static final String PHONE_ALREADY_EXISTS ="PHONE_ALREADY_EXISTS";
 	public static final String EMAIL_REQUIRED ="EMAIL_REQUIRED";

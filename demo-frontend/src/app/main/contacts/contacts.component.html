@@ -65,48 +65,39 @@
         </td>
       </ng-container>
 
-      <ng-container matColumnDef="name">
+      <ng-container matColumnDef="brand">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.name" | translate }}
+          {{ "Brand" | translate }}
         </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="name">
-          {{ row.name }}
+        <mat-cell *matCellDef="let row" data-label="brand">
+          {{ row.brand }}
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="surname1">
+      <ng-container matColumnDef="model">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.surname1" | translate }}
+          {{ "Model" | translate }}
         </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="surname1">
-          {{ row.surname1 }}
+        <mat-cell *matCellDef="let row" data-label="model">
+          {{ row.model }}
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="surname2">
+      <ng-container matColumnDef="price">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.surname2" | translate }}
+          {{ "Price" | translate }}
         </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="surname2">
-          {{ row.surname2 }}
+        <mat-cell *matCellDef="let row" data-label="price">
+          {{ row.price }}
         </mat-cell>
       </ng-container>
 
-      <ng-container matColumnDef="phone">
+      <ng-container matColumnDef="colour">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.phone" | translate }}
+          {{ "Colour" | translate }}
         </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="phone">
-          {{ row.phone }}
-        </mat-cell>
-      </ng-container>
-
-      <ng-container matColumnDef="email">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.email" | translate }}
-        </mat-header-cell>
-        <mat-cell *matCellDef="let row" data-label="email">
-          {{ row.email }}
+        <mat-cell *matCellDef="let row" data-label="colour">
+          {{ row.colour }}
         </mat-cell>
       </ng-container>
 

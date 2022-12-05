@@ -17,17 +17,16 @@ export class QuerySortPaginationRequest {
 }
 
 export class CreateContactRequest {
-  name: string;
-  surname1: string;
-  surname2: string;
-  phone: number;
-  email: string;
+  brand: string;
+  model: string;
+  price: string;
+  colour: string;
 
   constructor(contact: Contact) {
-    this.name = contact.name;
-    this.surname1 = contact.surname1;
-    this.surname2 = contact.surname2;
-    this.phone = contact.phone;
+    this.brand = contact.brand;
+    this.model = contact.model;
+    this.price = contact.price;
+    this.colour = contact.colour;
   }
 }
 

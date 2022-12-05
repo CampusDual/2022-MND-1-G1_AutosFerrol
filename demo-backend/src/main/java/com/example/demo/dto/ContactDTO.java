@@ -9,17 +9,17 @@ import com.example.demo.utils.Constant;
 public class ContactDTO {
 
 	private Integer id;
-	@NotEmpty(message = Constant.NAME_REQUIRED)
-	private String name;
+	@NotEmpty(message = Constant.BRAND_REQUIRED)
+	private String brand;
 	
-	@NotEmpty(message = Constant.SURNAME1_REQUIRED)
-	private String surname1;
+	@NotEmpty(message = Constant.MODEL_REQUIRED)
+	private String model;
 	
-	@NotEmpty(message = Constant.SURNAME2_REQUIRED)
-	private String surname2;
+	@NotEmpty(message = Constant.PRICE_REQUIRED)
+	private String price;
 	
-	@NotNull(message = Constant.PHONE_REQUIRED)
-	private Integer phone;
+	@NotNull(message = Constant.COLOUR_REQUIRED)
+	private String colour;
 
 
 	public Integer getId() {
@@ -31,36 +31,36 @@ public class ContactDTO {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getBrand() {
+		return brand;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 
-	public String getSurname1() {
-		return surname1;
+	public String getModel() {
+		return model;
 	}
 
-	public void setSurname1(String surname1) {
-		this.surname1 = surname1;
+	public void setModel(String model) {
+		this.model = model;
 	}
 
-	public String getSurname2() {
-		return surname2;
+	public String getPrice() {
+		return price;
 	}
 
-	public void setSurname2(String surname2) {
-		this.surname2 = surname2;
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
-	public Integer getPhone() {
-		return phone;
+	public String getColour() {
+		return colour;
 	}
 
-	public void setPhone(Integer phone) {
-		this.phone = phone;
+	public void setColour(String colour) {
+		this.colour = colour;
 	}
 
 	

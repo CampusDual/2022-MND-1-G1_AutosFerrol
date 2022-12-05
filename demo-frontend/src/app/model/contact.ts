@@ -1,7 +1,7 @@
 export class Contact {
   id: number;
-  name: string;
-  surname1: string;
-  surname2: string;
-  phone: number;
+  brand: string;
+  model: string;
+  price: string;
+  colour: string;
 }
