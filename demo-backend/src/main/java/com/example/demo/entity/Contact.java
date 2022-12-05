@@ -30,22 +30,21 @@ public class Contact implements Serializable{
 	@Column(nullable=false, unique = true)
 	private Integer phone;
 	
-	@Column(nullable=false)
-	private String email;
+	
 
 	public Contact() {
 	}
 	
-	public Contact(String name, String surname1, String surname2, Integer phone, String email) {
+	public Contact(String name, String surname1, String surname2, Integer phone) {
 		this.name = name;
 		this.surname1 = surname1;
 		this.surname2 = surname2;
 		this.phone = phone;
-		this.email = email;
+		
 	}
 
-	public Contact(Integer id, String name, String surname1, String surname2, Integer phone, String email) {
-		this(name, surname1, surname2, phone, email);
+	public Contact(Integer id, String name, String surname1, String surname2, Integer phone) {
+		this(name, surname1, surname2, phone);
 		this.id = id;
 	}
 
@@ -89,12 +88,6 @@ public class Contact implements Serializable{
 		this.phone = phone;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
 	private static final long serialVersionUID = 1L;
 }

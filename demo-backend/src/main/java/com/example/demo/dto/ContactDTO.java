@@ -20,10 +20,6 @@ public class ContactDTO {
 	
 	@NotNull(message = Constant.PHONE_REQUIRED)
 	private Integer phone;
-	
-	@Email(message= Constant.EMAIL_INVALID)
-	@NotEmpty(message = Constant.EMAIL_REQUIRED)
-	private String email;
 
 
 	public Integer getId() {
@@ -67,12 +63,9 @@ public class ContactDTO {
 		this.phone = phone;
 	}
 
-	public String getEmail() {
-		return email;
-	}
+	
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
+	
 
 }

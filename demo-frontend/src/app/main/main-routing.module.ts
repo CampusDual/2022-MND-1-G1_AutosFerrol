@@ -10,7 +10,7 @@ const routes: Routes = [
     component: MainHomeComponent,
     canActivate: [AuthGuard],
     data: {
-      allowedRoles: ['CONTACTS'],
+      allowedRoles: ['CONTACTS', 'CATALOGO'],
     },
   },
   {
