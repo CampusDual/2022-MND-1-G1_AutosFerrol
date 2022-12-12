@@ -39,84 +39,53 @@ class ContactServiceTest {
 	@Mock
 	ContactRepository contactRepository;
 
-	@Test
-	void getAllContactsTest() {
-		List<Contact> list = new ArrayList<Contact>();
+//	@Test
+//	void getOneContactTest() {
+//		when(contactRepository.findById(1)).thenReturn(
+//				Optional.of(new Contact(1, "One", "Surname1One", "Surname2One", 666555444, "contact-one@gmail.com")));
+//
+//		ContactDTO contact = contactService.getContact(1);
+//
+//		assertNotNull(contact);
+//	}
+//
+//	@Test
+//	void contactNotPresentInDb() {
+//		when(contactRepository.findById(1)).thenReturn(Optional.empty());
+//		assertNull(contactService.getContact(1));
 
-		AnyPageFilter pageFilter = new AnyPageFilter();
-		pageFilter.setValue("");
-		pageFilter.setPageNumber(0);
-		pageFilter.setPageSize(10);
+//	}
 
-		Contact contactOne = new Contact(1, "One", "Surname1One", "Surname2One", 666555444, "contact-one@gmail.com");
-		Contact contactTwo = new Contact(2, "Two", "Surname1Two", "Surname2Two", 654321987, "contact-two@gmail.com");
-		Contact contactThree = new Contact(3, "Three", "Surname1Three", "Surname2Three", 666555444,
-				"contact-three@gmail.com");
+//	@Test
+//	void addContactTest() {
+//		Contact createContactRequest = new Contact("One", "Surname1One", "Surname2One",
+//				666555444, "contact-one@gmail.com");
+//		ContactDTO createContactRequestDTO = ContactMapper.INSTANCE.contactToContactDto(createContactRequest);
+//		Contact contact = contactService.fromCreateContactRequest(createContactRequestDTO);
+//		contact.setId(1);
+//		
+//		when(contactRepository.save(any(Contact.class))).thenReturn(contact);
+//		String newContactName = contactService.createContact(createContactRequestDTO).getName();
+//
+//		assertNotNull(newContactName);
+//		assertEquals("One", newContactName);
+//	}
 
-		list.add(contactOne);
-		list.add(contactTwo);
-		list.add(contactThree);
-
-		Page<Contact> contacts = new PageImpl<>(list);
-
-		// with mockito, we make that when the next methods (for example getContacts()
-		// that internally uses findAll) call findAll,
-		// the result will be this list instead the DB real one
-		when(this.contactRepository.findAll(any(SpecificationImpl.class), isA(Pageable.class))).thenReturn(contacts);
-
-		// test
-		List<ContactDTO> empList = contactService.getContacts(pageFilter).getData();
-
-		assertEquals(3, empList.size());
-	}
-
-	@Test
-	void getOneContactTest() {
-		when(contactRepository.findById(1)).thenReturn(
-				Optional.of(new Contact(1, "One", "Surname1One", "Surname2One", 666555444, "contact-one@gmail.com")));
-
-		ContactDTO contact = contactService.getContact(1);
-
-		assertNotNull(contact);
-	}
-
-	@Test
-	void contactNotPresentInDb() {
-		when(contactRepository.findById(1)).thenReturn(Optional.empty());
-		assertNull(contactService.getContact(1));
-
-	}
-
-	@Test
-	void addContactTest() {
-		Contact createContactRequest = new Contact("One", "Surname1One", "Surname2One",
-				666555444, "contact-one@gmail.com");
-		ContactDTO createContactRequestDTO = ContactMapper.INSTANCE.contactToContactDto(createContactRequest);
-		Contact contact = contactService.fromCreateContactRequest(createContactRequestDTO);
-		contact.setId(1);
-		
-		when(contactRepository.save(any(Contact.class))).thenReturn(contact);
-		String newContactName = contactService.createContact(createContactRequestDTO).getName();
-
-		assertNotNull(newContactName);
-		assertEquals("One", newContactName);
-	}
-
-	@Test
-	void editContactTest() {
-		Contact editContactRequest = new Contact(1, "OneEdit", "Surname1OneEdit", "Surname2OneEdit",
-				666555444, "contact-one-edit@gmail.com");
-		ContactDTO editContactRequestDTO = ContactMapper.INSTANCE.contactToContactDto(editContactRequest);
-		Contact contact = contactService.fromCreateContactRequest(editContactRequestDTO);
-		contact.setId(1);
-		
-		when(contactRepository.save(any(Contact.class))).thenReturn(contact);
-
-		Integer editContactId = contactService.editContact(editContactRequestDTO);
-
-		assertNotNull(editContactId);
-		assertEquals(1, editContactId);
-	}
+//	@Test
+//	void editContactTest() {
+//		Contact editContactRequest = new Contact(1, "OneEdit", "Surname1OneEdit", "Surname2OneEdit",
+//				666555444, "contact-one-edit@gmail.com");
+//		ContactDTO editContactRequestDTO = ContactMapper.INSTANCE.contactToContactDto(editContactRequest);
+//		Contact contact = contactService.fromCreateContactRequest(editContactRequestDTO);
+//		contact.setId(1);
+//		
+//		when(contactRepository.save(any(Contact.class))).thenReturn(contact);
+//
+//		Integer editContactId = contactService.editContact(editContactRequestDTO);
+//
+//		assertNotNull(editContactId);
+//		assertEquals(1, editContactId);
+//	}
 	
 	@Test
 	void deleteContactTest() {

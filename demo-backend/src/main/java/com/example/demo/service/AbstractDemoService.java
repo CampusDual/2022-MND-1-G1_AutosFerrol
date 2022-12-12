@@ -27,13 +27,13 @@ public class AbstractDemoService {
 	}
 	
 	public Contact fromEditContactRequest(Contact contactRequest) {
-		return new Contact(contactRequest.getId(), contactRequest.getName(), contactRequest.getSurname1(),
-				contactRequest.getSurname2(), contactRequest.getPhone(), contactRequest.getEmail());
+		return new Contact(contactRequest.getId(), contactRequest.getBrand(), contactRequest.getModel(),
+				contactRequest.getPrice(), contactRequest.getColour());
 	}
 
 	public Contact fromCreateContactRequest(ContactDTO contactRequest) {
-		return  new Contact(contactRequest.getName(), contactRequest.getSurname1(), contactRequest.getSurname2(),
-				contactRequest.getPhone(), contactRequest.getEmail());
+		return  new Contact(contactRequest.getBrand(), contactRequest.getModel(), contactRequest.getPrice(),
+				contactRequest.getColour());
 	}
 
 }
