@@ -58,4 +58,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
       this.router.navigateByUrl(redirect);
     }
   }
+  gotocatalogo(): void {
+    this.router.navigate(['/catalogo']);
+  }
 }
+
+

@@ -41,7 +41,8 @@ public class SecurityBaseConfiguration extends ResourceServerConfigurerAdapter {
 		            "/oauth/check_token",
 		            "/oauth/token",
 		            //You can add here all endpoints you need to open access to them and no require token to call them:
-		            "/contacts/getContacts")
+		            "/contacts/getContacts",
+		            "/catalogo/getContacts")
 				.permitAll()
                 .anyRequest().authenticated();
     }

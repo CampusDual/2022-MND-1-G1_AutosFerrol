@@ -50,7 +50,7 @@ export class NavComponent implements OnInit, OnDestroy {
 
   public isAuthenticated() {
     debugger;
-    if (!this.authService.isLoggedIn() && !(this.router.url === '/login' || this.router.url === '/' || this.router.url === '/contacts')) {
+    if (!this.authService.isLoggedIn() && !(this.router.url === '/login' || this.router.url === '/' || this.router.url === '/catalogo')) {
       this.authService.redirectLoginSessionExpiration();
     }
     return this.authService.isLoggedIn();
