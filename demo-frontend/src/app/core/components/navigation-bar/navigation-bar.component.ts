@@ -31,6 +31,7 @@ export class NavigationBarComponent {
   logout() {
     this.authService.logout();
     // Redirect the user
+    debugger;
     this.router.navigateByUrl('/login');
     localStorage.setItem('close_session', '1');
     localStorage.setItem('close_session_language', this.translateService.currentLang);

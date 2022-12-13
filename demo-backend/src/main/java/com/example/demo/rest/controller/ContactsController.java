@@ -89,7 +89,7 @@ public class ContactsController {
 	 * @since 0.0.5
 	 */
 	@PostMapping(path = "/getContacts", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	@PreAuthorize("hasAnyAuthority('CONTACTS')")
+//	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public @ResponseBody DataSourceRESTResponse<List<ContactDTO>> getContacts(@RequestBody AnyPageFilter pageFilter) {
 		LOGGER.info("getContacts in progress...");
 		DataSourceRESTResponse<List<ContactDTO>> dres = new DataSourceRESTResponse<>();
@@ -111,7 +111,7 @@ public class ContactsController {
 	 * @since 0.0.5
 	 */
 	@GetMapping(path = "/getContacts")
-	@PreAuthorize("hasAnyAuthority('CONTACTS')")
+//	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public @ResponseBody List<ContactDTO> findAll() {
 		LOGGER.info("findAll in progress...");
 		return contactService.findAll();

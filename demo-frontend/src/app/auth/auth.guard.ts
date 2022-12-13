@@ -20,6 +20,7 @@ export class AuthGuard implements CanActivate {
   }
 
   checkLogin(url: string, allowedRoles: Array<string>): boolean {
+    debugger;
     if (this.authService.isLoggedIn() && this.isAllowed(allowedRoles)) {
       return true;
     }

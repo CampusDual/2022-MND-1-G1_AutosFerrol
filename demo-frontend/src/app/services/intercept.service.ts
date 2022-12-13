@@ -59,6 +59,7 @@ export class InterceptService implements HttpInterceptor {
             this.router.navigateByUrl('/main');
             this.snackBar.openSnackBar(this.translate.instant('UNAUTHORIZED_USER'), this.translate.instant('CLOSE'), 'red-snackbar');
           } else if (err.status === 401) {
+            debugger;
             localStorage.removeItem('access_token');
             this.router.navigateByUrl('/login');
             this.snackBar.openSnackBar(this.translate.instant('TOKEN_EXPIRED'), this.translate.instant('CLOSE'), 'red-snackbar');

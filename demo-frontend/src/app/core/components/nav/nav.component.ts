@@ -32,7 +32,7 @@ export class NavComponent implements OnInit, OnDestroy {
     },
     {
       icon: 'people',
-      route: 'contacts',
+      route: 'catalogo',
       title: 'menu.contacts',
       allowedRoles: ['CONTACTS']
     },
@@ -49,7 +49,8 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   public isAuthenticated() {
-    if (!this.authService.isLoggedIn() && !(this.router.url === '/login' || this.router.url === '/')) {
+    debugger;
+    if (!this.authService.isLoggedIn() && !(this.router.url === '/login' || this.router.url === '/' || this.router.url === '/contacts')) {
       this.authService.redirectLoginSessionExpiration();
     }
     return this.authService.isLoggedIn();
