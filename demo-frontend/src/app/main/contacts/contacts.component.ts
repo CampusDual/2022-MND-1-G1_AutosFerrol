@@ -100,8 +100,7 @@ export class ContactsComponent implements OnInit, AfterViewInit {
       this.input.nativeElement.value,
       this.fields.map((field) => new AnyField(field)),
       this.paginator.pageIndex,
-      this.paginator.pageSize,
-      'brand'
+      this.paginator.pageSize
     );
     pageFilter.order = [];
     pageFilter.order.push(

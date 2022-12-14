@@ -27,7 +27,7 @@ public class Contact implements Serializable{
 	@Column(nullable=false)
 	private String price;
 	
-	@Column(nullable=false, unique = true)
+	@Column(nullable=false, unique = false)
 	private String colour;
 	
 	

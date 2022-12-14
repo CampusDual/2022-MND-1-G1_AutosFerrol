@@ -11,8 +11,8 @@
     "title": "Demo"
   },
   "menu": {
-    "home": "Home",
-    "contacts": "Contactos",
+    "home": "Inicio",
+    "contacts": "Catálogo",
     "logout": "Cerrar sesión"
   },
   "language": {
