@@ -3,47 +3,39 @@
     <div class="input-row">
       <mat-card fxFlex>
         <mat-card-header>
-          <mat-card-title>{{ 'form.contact' | translate }}</mat-card-title>
+          <mat-card-title>{{ 'add.head' | translate }}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
           <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'table.contacts.name' | translate }}"
-                formControlName="name" name="contact-name" required />
-                <mat-error>{{'namerequired'| translate}}</mat-error>
+              <input matInput type="text" color="primary" placeholder="{{ 'add.brand' | translate }}"
+                formControlName="brand" name="catalogo-brand" required />
+                <mat-error>{{'add.brand'| translate}}</mat-error>
             </mat-form-field>
           </div>
           <div class="input-row">
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'table.contacts.surname1' | translate }}"
-                formControlName="surname1" name="contact-surname1" required />
+              <input matInput type="text" color="primary" placeholder="{{ 'add.model' | translate }}"
+                formControlName="model" name="catalogo-model" required />
                 <mat-error>
-                  {{'surname1required'| translate}}
+                  {{'add.model'| translate}}
                 </mat-error>
             </mat-form-field>
             <mat-form-field fxFlex>
-              <input matInput type="text" color="primary" placeholder="{{ 'table.contacts.surname2' | translate }}"
-                formControlName="surname2" name="contact-surname2" />
+              <input matInput type="text" color="primary" placeholder="{{ 'add.price' | translate }}"
+                formControlName="price" name="catalogo-price" />
+                <mat-error>
+                  {{'add.price'| translate}}
+                </mat-error>
             </mat-form-field>
           </div>
           <div class="input-row">
             <mat-form-field fxFlex>
-              <input matInput type="tel" color="primary" placeholder="{{ 'table.contacts.phone' | translate }}"
-                formControlName="phone" name="contact-phone" required />
+              <input matInput type="text" color="primary" placeholder="{{ 'add.colour' | translate }}"
+                formControlName="colour" name="catalogo-colour" required />
                 <mat-icon matSuffix>phone</mat-icon>
-                <mat-error *ngIf="contactForm.get('phone').hasError('required')">
-                  {{'phonerequired'| translate}}
-                </mat-error>
-                <mat-error *ngIf="contactForm.get('phone').hasError('pattern')">
-                  {{'phonepattern'| translate}}
-                </mat-error>
-            </mat-form-field>
-            <mat-form-field fxFlex>
-              <input matInput type="email" color="primary" placeholder="{{ 'table.contacts.email' | translate }}"
-                formControlName="email" name="contact-email" email />
-                <mat-icon matSuffix>mail</mat-icon>
                 <mat-error>
-                  {{'emailpattern'| translate}}
+                  {{'add.colour'| translate}}
                 </mat-error>
             </mat-form-field>
           </div>

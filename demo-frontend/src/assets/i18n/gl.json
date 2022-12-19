@@ -32,6 +32,13 @@
   "form": {
     "contact": "Contacto"
   },
+  "add": {
+    "head": "Novo coche",
+    "brand": "Marca do coche",
+    "model": "Modelo do coche",
+    "price": "Precio do coche",
+    "colour": "Color do coche"
+},
   "button": {
     "cancel": "Cancelar",
     "save": "Gardar"

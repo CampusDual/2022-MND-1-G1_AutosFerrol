@@ -50,10 +50,10 @@ export class EditContactComponent implements OnInit {
   createFormGroup() {
     this.contactForm = this.fb.group({
       id: [this.contact.id],
-      brand: [this.contact.brand, Validators.required],
+      brand: [this.contact.brand],
       model: [this.contact.model],
       price: [this.contact.price],
-      colour: [this.contact.colour, [Validators.required, Validators.pattern("^[0-9]{9}$")]],
+      colour: [this.contact.colour],
     });
   }
 

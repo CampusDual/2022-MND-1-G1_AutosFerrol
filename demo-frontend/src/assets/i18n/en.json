@@ -32,6 +32,13 @@
   "form": {
     "contact": "Contact"
   },
+  "add": {
+    "head": "New car",
+    "brand": "Car brand",
+    "model": "Car model",
+    "price": "Car price",
+    "colour": "Car colour"
+},
   "button": {
     "cancel": "Cancel",
     "save": "Save"

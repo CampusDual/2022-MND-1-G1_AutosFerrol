@@ -168,11 +168,11 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   }
 
   onAdd() {
-    this.router.navigate(['/contacts/add']);
+    this.router.navigate(['/catalogo/add']);
   }
 
   onEdit(row: Contact) {
     this.highlightedRow = row;
-    this.router.navigate(['/contacts/edit/' + row.id]);
+    this.router.navigate(['/catalogo/edit/' + row.id]);
   }
 }
