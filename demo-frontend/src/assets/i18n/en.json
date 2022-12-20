@@ -44,6 +44,11 @@
     "correo": "E-MAIL: compraventaferrol@gmail.com",
     "telefono": "PHONE NUMBER: (+34) 981 54 54 54"
   },
+  "inicio": {
+    "usa": "Use this user and password for login:",
+    "usuario": "Username: demo",
+    "contraseña": "Password: demouser"
+  },
   "button": {
     "cancel": "Cancel",
     "save": "Save"

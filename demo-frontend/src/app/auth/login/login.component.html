@@ -59,14 +59,14 @@
         ng-reflect-fx-layout="column"
         ng-reflect-fx-layout-align="center center"
       >
-        <span class="login_info">Use this user and password for login:</span>
-        <span class="dark_text">Username : demo</span>
-        <span class="dark_text">Password : demouser</span>
+        <span class="login_info">{{ "inicio.usa" | translate }}</span>
+        <span class="dark_text">{{ "inicio.usuario" | translate }}</span>
+        <span class="dark_text">{{ "inicio.contraseña" | translate }}</span>
       </div>
 
-      <p align="center">DATOS DE CONTACTO:</p>
-      <p align="center">CORREO: compraventaferrol@gmail.com</p>
-      <p align="center">NÚMERO DE TELÉFONO: 981545454</p>
+      <p align="center"> {{ "datos.contacto" | translate }}</p>
+      <p align="center">{{ "datos.correo" | translate }}</p>
+      <p align="center">{{ "datos.telefono" | translate }}</p>
     </form>
   </div>
 </div>
