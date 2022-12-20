@@ -38,7 +38,7 @@
     "model": "Car model",
     "price": "Car price",
     "colour": "Car colour"
-},
+  },
   "button": {
     "cancel": "Cancel",
     "save": "Save"
