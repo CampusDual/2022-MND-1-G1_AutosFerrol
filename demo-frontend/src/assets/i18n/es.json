@@ -39,6 +39,11 @@
       "price": "Precio del coche",
       "colour": "Color del coche"
   },
+  "datos": {
+    "contacto": "DATOS DE CONTACTO",
+    "correo": "CORREO ELECTRÓNICO: compraventaferrol@gmail.com",
+    "telefono": "NÚMERO DE TELÉFONO: (+34) 981 54 54 54"
+  },
   "button": {
     "cancel": "Cancelar",
     "save": "Guardar"
