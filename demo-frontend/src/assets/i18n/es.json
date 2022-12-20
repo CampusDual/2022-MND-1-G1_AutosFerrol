@@ -40,6 +40,7 @@
       "colour": "Color del coche"
   },
   "datos": {
+    "catalogo": "Catálogo de vehículos",
     "contacto": "DATOS DE CONTACTO",
     "correo": "CORREO ELECTRÓNICO: compraventaferrol@gmail.com",
     "telefono": "NÚMERO DE TELÉFONO: (+34) 981 54 54 54"
