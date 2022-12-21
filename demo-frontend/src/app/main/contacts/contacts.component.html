@@ -1,4 +1,4 @@
-<div>
+<div id="contenedor">
   <div
     fxLayout="row"
     fxLayoutAlign="space-between"
@@ -8,13 +8,16 @@
     fxLayoutGap.lt-sm="10px"
   >
     <div fxFlex fxLayout.lt-sm="row" class="k-flex-wrap">
-      <button mat-raised-button (click)="onAdd()">
+      <button mat-raised-button (click)="onAdd()" *ngIf="isAuthenticated()">
         <mat-icon>add</mat-icon> {{ "new" | translate }}
+      </button>
+      <button mat-raised-button (click)="iniciar()" *ngIf="!isAuthenticated()">
+        <mat-icon>login</mat-icon> {{ "iniciar Sesion" | translate }}
       </button>
       <button
         mat-raised-button
         [disabled]="!selection.hasValue()"
-        (click)="onDelete()"
+        (click)="onDelete()" *ngIf="isAuthenticated()"
       >
         <mat-icon>delete</mat-icon> {{ "delete" | translate }}
       </button>
@@ -104,7 +107,7 @@
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row
         *matRowDef="let row; columns: displayedColumns"
-        (click)="onEdit(row)"
+        (click)="onEdit(row)" 
         class="row-link"
         [style.background]="
           highlightedRow && highlightedRow.id === row.id

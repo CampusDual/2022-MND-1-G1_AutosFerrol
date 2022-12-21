@@ -18,6 +18,7 @@ import { ContactService } from '../../services/contact.service';
 import { Router } from '@angular/router';
 import { ConfirmationDialogComponent } from 'src/app/shared/confirmation-dialog/confirmation-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   // selector: 'app-contacts',
@@ -49,7 +50,8 @@ export class ContactsComponent implements OnInit, AfterViewInit {
     private contactService: ContactService,
     private translate: TranslateService,
     private router: Router,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    public authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -166,13 +168,33 @@ export class ContactsComponent implements OnInit, AfterViewInit {
       });
     }
   }
+  public isAuthenticated() {
+    
+    //return this.authService.getRoles().some(authoritie => allowedRoles.indexOf(authoritie) > -1);
+    if(this.authService.isLoggedIn()){
+    const a = this.authService.getRoles();
+    if (!a.includes("ADMIN")){
+      return false;
+    }
+  }
+    return this.authService.isLoggedIn();
+  }
 
   onAdd() {
+    
     this.router.navigate(['/catalogo/add']);
+  }
+  
+  iniciar() {
+    
+    this.router.navigate(['/']);
   }
 
   onEdit(row: Contact) {
     this.highlightedRow = row;
+    if(this.isAuthenticated){
     this.router.navigate(['/catalogo/edit/' + row.id]);
+    }
+    
   }
 }
