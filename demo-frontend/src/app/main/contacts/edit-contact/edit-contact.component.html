@@ -21,11 +21,13 @@
                   {{'add.model'| translate}}
                 </mat-error>
             </mat-form-field>
+          </div>
+          <div class="input-row">
             <mat-form-field fxFlex>
               <input matInput type="text" color="primary" placeholder="{{ 'add.price' | translate }}"
-                formControlName="price" name="catalogo-price" />
+               formControlName="price" name="catalogo-price" required/>
                 <mat-error>
-                  {{'add.price'| translate}}
+                 {{'add.price'| translate}}
                 </mat-error>
             </mat-form-field>
           </div>
@@ -33,7 +35,6 @@
             <mat-form-field fxFlex>
               <input matInput type="text" color="primary" placeholder="{{ 'add.colour' | translate }}"
                 formControlName="colour" name="catalogo-colour" required />
-                <mat-icon matSuffix>phone</mat-icon>
                 <mat-error>
                   {{'add.colour'| translate}}
                 </mat-error>

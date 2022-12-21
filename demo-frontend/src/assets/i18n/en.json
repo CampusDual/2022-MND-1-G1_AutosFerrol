@@ -40,6 +40,7 @@
     "colour": "Car colour"
   },
   "datos": {
+    "login": "Login",
     "catalogo": "Car List",
     "contacto": "CONTACT INFO",
     "correo": "E-MAIL: compraventaferrol@gmail.com",
@@ -92,7 +93,7 @@
   "UNKNOWN_ERROR": "Unknown error",
   "CLOSE": "CLOSE",
   "filter": "Filter",
-  "new": "New",
+  "new": "Add car",
   "delete": "Delete",
   "refresh": "Refresh",
   "loading": "Loading",

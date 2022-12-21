@@ -40,6 +40,7 @@
     "colour": "Color do coche"
   },
   "datos": {
+    "login": "Iniciar sesión",
     "catalogo": "Catálogo de vehículos",
    "contacto": "DATOS DE CONTACTO",
    "correo": "CORREO ELECTRÓNICO: compraventaferrol@gmail.com",
@@ -92,7 +93,7 @@
   "SESSION_EXPIRED": "Sesión expirada",
   "CLOSE": "PECHAR",
   "filter": "Filtro",
-  "new": "Novo",
+  "new": "Engadir coche",
   "delete": "Eliminar",
   "refresh": "Refrescar",
   "loading": "Cargando",
