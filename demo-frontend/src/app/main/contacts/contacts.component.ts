@@ -173,7 +173,7 @@ export class ContactsComponent implements OnInit, AfterViewInit {
     //return this.authService.getRoles().some(authoritie => allowedRoles.indexOf(authoritie) > -1);
     if(this.authService.isLoggedIn()){
     const a = this.authService.getRoles();
-    if (!a.includes("ADMIN", "CONTACTS")){
+    if (!a.includes("ADMIN")){
       return false;
     }
   }
