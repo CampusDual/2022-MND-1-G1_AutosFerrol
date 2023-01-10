@@ -8,7 +8,8 @@
     "title": "Title"
   },
   "demo": {
-    "title": "Demo"
+    "title": "Demo",
+    "menu": "Main menu"
   },
   "menu": {
     "home": "Home",

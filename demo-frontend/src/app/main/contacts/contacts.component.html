@@ -70,7 +70,7 @@
 
       <ng-container matColumnDef="brand">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-            {{"add.brand"| translate}}
+        <H2><b>{{"add.brand"| translate}}</b></H2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="brand">
           {{ row.brand }}
@@ -79,7 +79,7 @@
 
       <ng-container matColumnDef="model">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "add.model" | translate }}
+          <H2><b>{{ "add.model" | translate }}</b></H2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="model">
           {{ row.model }}
@@ -88,7 +88,7 @@
 
       <ng-container matColumnDef="price">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "add.price" | translate }}
+          <H2><b>{{ "add.price" | translate }}</b></H2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="price">
           {{ row.price }}
@@ -97,7 +97,7 @@
 
       <ng-container matColumnDef="colour">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "add.colour" | translate }}
+          <H2><b>{{ "add.colour" | translate }}</b></H2>
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="colour">
           {{ row.colour }}
@@ -132,7 +132,7 @@
       showFirstLastButtons
     ></mat-paginator>
   </div>
-      <p align="center"> {{ "datos.contacto" | translate }}</p>
-      <p align="center">{{ "datos.correo" | translate }}</p>
-      <p align="center">{{ "datos.telefono" | translate }}</p>
+  <b><p align="center"> {{ "datos.contacto" | translate }}</p></b>
+  <b><p align="center">{{ "datos.correo" | translate }}</p></b>
+  <b><p align="center">{{ "datos.telefono" | translate }}</p></b>
 </div>
