@@ -1,6 +1,6 @@
 .login-outer-container {
   margin: 8px;
-  min-height: 640px;
+  min-height: 1025px;
   background-color: #bdbdbd;
   background-image: url(https://drivercarsbcn2.espaistelematics.com/wp-content/uploads/2021/03/DSC09923-scaled.jpg);
   background-position: center;
@@ -64,7 +64,7 @@
 
     button {
       width: 100%;
-      margin: 30px 0 0;
+      margin: 10px 0 0;
     }
 
     .dark_text {
@@ -97,7 +97,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 12000px) {
   .login-outer-container {
     .login-inner-container {
       width: 450px;

@@ -86,7 +86,7 @@ export class AuthService {
 
   redirectLoginSessionExpiration() {
     this.logout();
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/contacts');
     localStorage.setItem('close_session', '1');
     localStorage.setItem('expired_session_message', 'true');
     localStorage.setItem(

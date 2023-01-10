@@ -4,8 +4,8 @@
       <img src="./assets/images/campus-dual-azul-squared.png" alt="Logo" />
     </div>
 
-    <div><button mat-raised-button (click)="gotocatalogo()">
-      <mat-icon>add</mat-icon> {{ "datos.catalogo" | translate }}
+    <div><button color="primary" mat-raised-button (click)="gotocatalogo()">
+      <mat-icon></mat-icon> {{ "datos.catalogo" | translate }}
     </button>
     </div>
     
@@ -59,14 +59,11 @@
         ng-reflect-fx-layout="column"
         ng-reflect-fx-layout-align="center center"
       >
-        <span class="login_info">{{ "inicio.usa" | translate }}</span>
-        <span class="dark_text">{{ "inicio.usuario" | translate }}</span>
-        <span class="dark_text">{{ "inicio.contraseña" | translate }}</span>
-      </div>
 
-      <p align="center"> {{ "datos.contacto" | translate }}</p>
-      <p align="center">{{ "datos.correo" | translate }}</p>
-      <p align="center">{{ "datos.telefono" | translate }}</p>
+      </div>    
+      <b><p align="center"> {{ "datos.contacto" | translate }}</p></b>
+      <b><p align="center">{{ "datos.correo" | translate }}</p></b>
+      <b><p align="center">{{ "datos.telefono" | translate }}</p></b>
     </form>
   </div>
 </div>
