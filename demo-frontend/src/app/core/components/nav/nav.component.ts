@@ -49,11 +49,20 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   public isAuthenticated() {
-    debugger;
-    if (!this.authService.isLoggedIn() && !(this.router.url === '/login' || this.router.url === '/' || this.router.url === '/catalogo')) {
+    if (!this.authService.isLoggedIn() && !(this.router.url === '/login' || this.router.url === '/' || this.router.url === '/catalogo' || this.isCatalogoEdit())) {
       this.authService.redirectLoginSessionExpiration();
     }
     return this.authService.isLoggedIn();
+  }
+
+  public isCatalogoEdit() {
+    const a = this.router.url.split("/", 3);
+    if(a.length>2){
+    if (a [1]==='catalogo' && a [2]==='edit') {
+      return true;
+    }
+    }
+    return false;
   }
 
   public ngOnDestroy() {
