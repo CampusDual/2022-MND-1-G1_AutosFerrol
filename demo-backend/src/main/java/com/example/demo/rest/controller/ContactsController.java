@@ -52,7 +52,7 @@ public class ContactsController {
 	 * @return el contacto cuyo id sea el pasado por parámetros.
 	 */
 	@GetMapping("/getContact")
-	@PreAuthorize("hasAnyAuthority('CONTACTS')")
+//	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public ResponseEntity<?> getContact(@RequestParam(value = "id") Integer id) {
 		LOGGER.info("getContact in progress...");
 		ContactDTO contact = null;

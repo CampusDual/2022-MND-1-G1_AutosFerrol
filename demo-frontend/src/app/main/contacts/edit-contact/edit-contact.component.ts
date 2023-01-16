@@ -5,6 +5,7 @@ import { ContactService } from 'src/app/services/contact.service';
 
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { LoggerService } from 'src/app/services/logger.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   templateUrl: './edit-contact.component.html',
@@ -13,6 +14,7 @@ import { LoggerService } from 'src/app/services/logger.service';
 export class EditContactComponent implements OnInit {
   idContact: number;
 
+  ocultar =  false;
   contactForm: FormGroup;
   contact: Contact;
   errores: string[];
@@ -22,7 +24,8 @@ export class EditContactComponent implements OnInit {
     private contactService: ContactService,
     private router: Router,
     private route: ActivatedRoute,
-    private logger: LoggerService
+    private logger: LoggerService,
+    public authService: AuthService
   ) {
     this.contact = new Contact();
   }
@@ -88,5 +91,17 @@ export class EditContactComponent implements OnInit {
 
   cancel() {
     this.router.navigate(['/contacts']);
+  }
+
+  public isAuthenticated() {
+    
+    //return this.authService.getRoles().some(authoritie => allowedRoles.indexOf(authoritie) > -1);
+    if(this.authService.isLoggedIn()){
+    const a = this.authService.getRoles();
+    if (!a.includes("ADMIN")){
+      return false;
+    }
+  }
+    return this.authService.isLoggedIn();
   }
 }

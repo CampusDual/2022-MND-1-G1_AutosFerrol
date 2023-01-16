@@ -11,7 +11,7 @@
       <button mat-raised-button (click)="onAdd()" *ngIf="isAuthenticated()">
         <mat-icon>add</mat-icon> {{ "new" | translate }}
       </button>
-      <button mat-raised-button (click)="iniciar()" *ngIf="!isAuthenticated()">
+      <button mat-raised-button (click)="iniciar()" *ngIf="!this.authService.isLoggedIn()">
         <mat-icon>login</mat-icon> {{ "datos.login" | translate }}
       </button>
       <button
