@@ -32,8 +32,9 @@ public class AbstractDemoService {
 	}
 
 	public Contact fromCreateContactRequest(ContactDTO contactRequest) {
-		return  new Contact(contactRequest.getBrand(), contactRequest.getModel(), contactRequest.getPrice(),
-				contactRequest.getColour());
+//		return  new Contact(contactRequest.getBrand(), contactRequest.getModel(), contactRequest.getPrice(),
+//				contactRequest.getColour());
+		return new Contact();
 	}
 
 }

@@ -39,6 +39,7 @@ export class ContactService {
   public createContact(contact: Contact): Observable<any> {
     const url = API_CONFIG.createContact;
     const body: CreateContactRequest = new CreateContactRequest(contact);
+    debugger
     const headers = new HttpHeaders({
       'Content-type': 'application/json; charset=utf-8',
       Authorization: 'Basic ' + Buffer.from(`${environment.clientName}:${environment.clientSecret}`, 'utf8').toString('base64'),

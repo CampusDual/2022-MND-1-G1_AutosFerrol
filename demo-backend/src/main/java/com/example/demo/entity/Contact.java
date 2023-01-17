@@ -25,7 +25,7 @@ public class Contact implements Serializable{
 	private String model;
 	
 	@Column(nullable=false)
-	private String price;
+	private Integer price;
 	
 	@Column(nullable=false, unique = false)
 	private String colour;
@@ -35,7 +35,7 @@ public class Contact implements Serializable{
 	public Contact() {
 	}
 	
-	public Contact(String brand, String model, String price, String colour) {
+	public Contact(String brand, String model, Integer price, String colour) {
 		this.brand = brand;
 		this.model = model;
 		this.price = price;
@@ -43,7 +43,7 @@ public class Contact implements Serializable{
 		
 	}
 
-	public Contact(Integer id, String brand, String model, String price, String colour) {
+	public Contact(Integer id, String brand, String model, Integer price, String colour) {
 		this(brand, model, price, colour);
 		this.id = id;
 	}
@@ -72,11 +72,11 @@ public class Contact implements Serializable{
 		this.model = model;
 	}
 
-	public String getPrice() {
+	public Integer getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
 

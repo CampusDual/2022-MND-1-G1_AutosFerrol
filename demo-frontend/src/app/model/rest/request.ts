@@ -19,7 +19,7 @@ export class QuerySortPaginationRequest {
 export class CreateContactRequest {
   brand: string;
   model: string;
-  price: string;
+  price: number;
   colour: string;
 
   constructor(contact: Contact) {
