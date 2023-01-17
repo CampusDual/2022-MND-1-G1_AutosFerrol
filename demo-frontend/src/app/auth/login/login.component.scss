@@ -1,6 +1,6 @@
 .login-outer-container {
   margin: 8px;
-  min-height: 1025px;
+  min-height: 640px;
   background-color: #bdbdbd;
   background-image: url(https://drivercarsbcn2.espaistelematics.com/wp-content/uploads/2021/03/DSC09923-scaled.jpg);
   background-position: center;
@@ -17,7 +17,7 @@
     -webkit-transform: translate(-50%, 0);
     width: 250px;
     padding: 1em;
-    background-color: #ffffffbb;
+    background-color: #ffffffa3;
 
     h1 {
       text-align: center;
@@ -25,11 +25,11 @@
     }
 
     .logo-container {
-      border-radius: 5%;
+      border-radius: 50%;
       width: 150px;
       height: 150px;
       position: relative;
-      background-color: #ffffff;
+      background-color: #a3c0f0;
       top: -75px;
       left: 50%;
       -webkit-transform: translate(-50%, 0%);
@@ -64,7 +64,7 @@
 
     button {
       width: 100%;
-      margin: 10px 0 0;
+      margin: 30px 0 0;
     }
 
     .dark_text {
@@ -83,7 +83,7 @@
 @media (min-width: 480px) {
   .login-outer-container {
     .login-inner-container {
-      width: 480px;
+      width: 370px;
       padding-right: 2em;
       padding-left: 2em;
 
@@ -97,7 +97,7 @@
   }
 }
 
-@media (min-width: 12000px) {
+@media (min-width: 600px) {
   .login-outer-container {
     .login-inner-container {
       width: 450px;
@@ -114,11 +114,11 @@
   }
 }
 
-@media (min-height: 58px) {
+@media (min-height: 580px) {
   .login-outer-container {
     .login-inner-container {
       padding-top: 8em;
-      padding-bottom: 1.5em;
+      padding-bottom: 5em;
       top: 50%;
       transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);

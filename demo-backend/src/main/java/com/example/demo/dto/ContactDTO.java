@@ -16,7 +16,7 @@ public class ContactDTO {
 	private String model;
 	
 	@NotEmpty(message = Constant.PRICE_REQUIRED)
-	private int price;
+	private String price;
 	
 	@NotNull(message = Constant.COLOUR_REQUIRED)
 	private String colour;
@@ -47,11 +47,11 @@ public class ContactDTO {
 		this.model = model;
 	}
 
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 
