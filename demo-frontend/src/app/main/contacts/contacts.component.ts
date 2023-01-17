@@ -192,6 +192,9 @@ export class ContactsComponent implements OnInit, AfterViewInit {
 
   onEdit(row: Contact) {
     this.highlightedRow = row;
+    if(this.isAuthenticated){
     this.router.navigate(['/catalogo/edit/' + row.id]);
+    }
+    
   }
 }
