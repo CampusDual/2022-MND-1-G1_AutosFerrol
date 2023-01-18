@@ -75,7 +75,7 @@ export class EditContactComponent implements OnInit {
 
   redirectList(response: any) {
     if (response.responseCode === 'OK') {
-      this.router.navigate(['/contacts']);
+      this.router.navigate(['/catalogo']);
     }else{
       console.log(response);
     }
@@ -90,7 +90,7 @@ export class EditContactComponent implements OnInit {
   }
 
   cancel() {
-    this.router.navigate(['/contacts']);
+    this.router.navigate(['/catalogo']);
   }
 
   public isAuthenticated() {
