@@ -60,7 +60,7 @@ export class ContactsComponent implements OnInit, AfterViewInit {
       '',
       this.fields.map((field) => new AnyField(field)),
       0,
-      20,
+      10,
       'brand'
     );
     this.dataSource.getContacts(pageFilter);

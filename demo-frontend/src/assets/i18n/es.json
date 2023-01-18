@@ -34,11 +34,11 @@
     "contact": "Contacto"
   },
   "add": {
-      "head": "Nuevo coche",
-      "brand": "Marca del coche",
-      "model": "Modelo del coche",
-      "price": "Precio del coche",
-      "colour": "Color del coche"
+      "head": "NUEVO COCHE",
+      "brand": "MARCA",
+      "model": "MODELO",
+      "price": "PRECIO",
+      "colour": "COLOR"
   },
   "datos": {
     "login": "Iniciar sesión",
